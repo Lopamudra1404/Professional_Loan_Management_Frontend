@@ -1,0 +1,167 @@
+
+<div class="container" style="align-items: center;">
+<div id="page" class="card" style="width: 55vw; align-items: center;">
+    <h2>User Registration</h2>
+    <form>
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" [(ngModel)]="customer.customerName" class="form-control"  name="name" id="name" #name="ngModel" required>
+            <div *ngIf="name.invalid && (name.dirty || name.touched)">
+
+                <div *ngIf="name.errors?.['required']" class="text-danger input-control">
+      
+                  Enter a valid Name
+      
+                </div>
+      
+              </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="Email-ID" class="form-label">Email-ID</label>
+            <input type="email" [(ngModel)]="customer.customerEmail" class="form-control"  name="email" id="email" #email="ngModel" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$" required>
+            <div *ngIf="email.invalid && (email.dirty || email.touched)">
+
+                <div *ngIf="email.errors?.['required']" class="text-danger input-control">
+      
+                  Enter a valid Email-ID
+      
+                </div>
+      
+              </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" [(ngModel)]="customer.customerPassword" class="form-control"  name="password" id="password" #password="ngModel" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" required>
+            <div *ngIf="password.invalid && (password.dirty || password.touched)">
+
+                <div *ngIf="password.errors?.['required']" class="text-danger input-control">
+      
+                  Enter a valid Password
+      
+                </div>
+      
+              </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="phoneNo" class="form-label">Phone no</label>
+            <input type="number" [(ngModel)]="customer.customerPhoneNo" class="form-control" name="phoneNo" id="phoneNo" #phoneNo="ngModel" pattern="^((\\+91-?)|0)?[0-9]{10}$" required>
+            <div *ngIf="phoneNo.invalid && (phoneNo.dirty || phoneNo.touched)">
+
+                <div *ngIf="phoneNo.errors?.['required']" class="text-danger input-control">
+      
+                  Enter a valid phoneNo
+      
+                </div>
+      
+              </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="dob" class="form-label">Birth-Date</label>
+            <input type="date" [(ngModel)]="customer.customerDob" class="form-control" zsw2 name="dob" id="dob" #dob="ngModel" required>
+            <div *ngIf="dob.invalid && (dob.dirty || dob.touched)">
+
+                <div *ngIf="dob.errors?.['required']" class="text-danger input-control">
+      
+                 Invalid Date-Of-Birth
+      
+                </div>
+      
+              </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="nationality" class="form-label">Nationality</label>
+            <input type="text" [(ngModel)]="customer.customerNationality" class="form-control" name="nationality" id="nationality" #nationality="ngModel" pattern="[a-zA-Z ]*" required>
+            <div *ngIf="nationality.invalid && (nationality.dirty || nationality.touched)">
+
+                <div *ngIf="nationality.errors?.['required']" class="text-danger input-control">
+      
+                  Text Invalid
+      
+                </div>
+      
+              </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="gender" class="form-label">Gender</label>
+            <input type="text" [(ngModel)]="customer.customerGender" class="form-control" name="gender" id="gender" #gender="ngModel" pattern="^([A-Za-z] {4,6})" required>
+            <div *ngIf="gender.invalid && (gender.dirty || gender.touched)">
+
+                <div *ngIf="gender.errors?.['required']" class="text-danger input-control">
+      
+                    Text Invalid
+      
+                </div>
+      
+              </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="workexperience" class="form-label">Work Experience(in yrs)</label>
+            <input type="number" [(ngModel)]="customer.workexperience" class="form-control" name="workexperience" id="workexperience" #workexperience="ngModel" required>
+            <div *ngIf="workexperience.invalid && (workexperience.dirty || workexperience.touched)">
+
+                <div *ngIf="workexperience.errors?.['required']" class="text-danger input-control">
+      
+                  Invalid Input
+      
+                </div>
+      
+              </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="income" class="form-label"> Anual Income</label>
+            <input type="number" [(ngModel)]="customer.customerIncome" class="form-control" name="income" id="income" #income="ngModel" required>
+            <div *ngIf="income.invalid && (income.dirty || income.touched)">
+
+                <div *ngIf="income.errors?.['required']" class="text-danger input-control">
+      
+                    Invalid Annual Income
+      
+                </div>
+      
+              </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="creditscore" class="form-label">Credit Score</label>
+            <input type="number" [(ngModel)]="customer.customerCreditScore" class="form-control" name="creditscore" id="creditscore" #creditscore="ngModel" pattern="^([0,9]{3}$)" required>
+            <div *ngIf="creditscore.invalid && (creditscore.dirty || creditscore.touched)">
+
+                <div *ngIf="creditscore.errors?.['required']" class="text-danger input-control">
+      
+                    Invalid Creditscore
+      
+                </div>
+      
+              </div>
+        </div>
+
+        <div class="mb-3" id="add">
+            <label for="address" class="form-label">Address</label>
+            <input type="text" [(ngModel)]="customer.customerAddress" class="form-control" name="address" id="address" #address="ngModel" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" required>
+            <div *ngIf="address.invalid && (address.dirty || address.touched)">
+
+                <div *ngIf="address.errors?.['required']" class="text-danger input-control">
+      
+                  Enter a valid Address
+      
+                </div>
+      
+              </div>
+        </div>
+
+         
+
+        <button (click)="userRegister()" id="register" class="btn btn-primary">Register</button>
+    </form>
+
+
+</div>
+</div>

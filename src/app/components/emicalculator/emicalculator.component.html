@@ -1,0 +1,95 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="emicalculator.component.css" />
+</head>
+
+
+<body>
+    <div class="container1">
+       
+
+        <nav>
+            <ul>
+                <li><a routerLink="/homepage">Home</a></li>
+
+            </ul>
+
+        </nav>
+
+        <div class="loan-calculator">
+            <div class="top">
+
+
+
+                <h2>EMI Calculator</h2>
+
+
+                <form action="#">
+                    <div class="group">
+                        <div class="title">Loan Amount</div>
+                        <input type="number" [(ngModel)]="loanCalculatorDto.loanAmount" id="loanAmount"
+                            name="loanAmount">
+                    </div>
+
+
+                    <div class="group">
+                        <div class="title">Interest Rate</div>
+                        <input type="number" [(ngModel)]="loanCalculatorDto.annualInterestRate" id="annualInterestRate"
+                            name="annualInterestRate">
+                    </div>
+
+                    <div class="group">
+                        <div class="title">Tenure (in years)</div>
+                        <input type="number" [(ngModel)]="loanCalculatorDto.loanTermInYears" id="loanTermInYears"
+                            name="loanTermInYears">
+                    </div>
+                </form>
+            </div>
+            <div class="button-container">
+                <button class="calculate-btn" (click)="calculateLoan()">Calculate</button>
+            </div>
+
+            <div class="result" *ngIf="loanCalculatorResult">
+                <div class="left">
+                    <div class="loan-emi">
+                        <h3> EMI </h3>
+                        <p class="value"> {{ loanCalculatorResult.monthlyPayment }}</p>
+                    </div>
+
+                    <div class="total-amount">
+                        <h3>Total Interest</h3>
+                        <p class="value"> {{ loanCalculatorResult.totalInterestPaid }}</p>
+                    </div>
+
+                    <div class="total-interest">
+                        <h3>Total Amount to be paid </h3>
+                        <p class="value"> {{ loanCalculatorResult.totalAmountPaid }}</p>
+                    </div>
+
+
+
+                </div>
+
+                <div class="right">
+                    <canvas id="myChart" width="400" height="400"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js"></script>
+
+        <script src="main.js"></script>
+
+
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js"></script>
+
+    <script src="main.js"></script>
+</body>

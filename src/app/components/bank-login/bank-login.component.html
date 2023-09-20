@@ -1,0 +1,28 @@
+<div class="login">
+
+  <div class="container" class="min-vh-100 d-flex justify-content-center align-items-center">
+    <form class="d-flex flex-column shadow p-5 mb-5 bg-body rounded">
+      <h4 style="text-align: center;padding-bottom:20px ;">Bank Login</h4>
+      <div class="mb-5">
+        <label for="email" class="form-label">UserName/Email</label>
+        <input type="email" [(ngModel)]="bank.bankEmail" class="form-control" name="email" id="email"
+          placeholder=abc@gmail.com aria-describedby="emailHelp">
+      </div>
+
+      <div class="mb-5">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" [(ngModel)]="bank.bankPassword" class="form-control" name="password" id="password"
+          placeholder="**password**">
+      </div>
+
+
+      <button (click)="bankLogin()" id="loginbtn" class="btn btn-primary">Login</button>
+
+
+
+
+
+    </form>
+
+  </div>
+</div>

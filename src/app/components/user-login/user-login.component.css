@@ -1,0 +1,85 @@
+.login{
+    background: linear-gradient(164deg, #E8E8E8 5%, #80D0C7 100%);
+
+}
+
+/* /* form{
+
+    align-items: center;
+    width: 25%;
+
+} 
+form input{
+    width: 100%;
+}
+ 
+
+.mb-3{
+
+    align-content: center;
+
+} */
+/* button{
+    min-width: 198px;
+}
+  */
+
+
+ 
+
+h3{
+
+    padding-bottom: 25px;
+    text-align: center;
+
+}
+nav {
+    width: 95%;
+    margin: auto;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;  
+}
+nav ul li{
+    margin:0px 5px;
+}
+nav ul a{
+    text-decoration: none;
+    padding: 0.3rem 1.3rem;
+    font-size: 18px;
+    font-weight: bold;
+    color: #494234;
+    position: relative;
+    z-index: 1;
+}
+nav ul a::after{
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0px;
+    border-radius: 20px;
+    background-color: #4fc2bc;
+    opacity: 40%;
+    z-index: -1;
+    transition: 0.5s;
+}
+nav ul a:hover:after{
+    width: 100%;
+}
+.erroClass{
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  p{
+    font-size: small;
+  }
+

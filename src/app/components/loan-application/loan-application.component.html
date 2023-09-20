@@ -1,0 +1,35 @@
+<div class="main">
+    <div id="page" class="card" style="width: 25rem;height: 30rem;">
+        <h2>loan-application</h2>
+        <form>
+            <div id="space">
+                <label for="loanType">Select Loan Type:</label>
+                <select id="loanType" name="loanType" [(ngModel)]="selectedLoanType">
+                    <option *ngFor="let loanType of loanTypes" [value]="loanType">{{ loanType }}</option>
+                </select>
+
+            </div>
+
+            <div class="mb-3">
+                <label for="loanAmount" class="form-label">Loan Amount</label>
+                <input type="number" [(ngModel)]="loan.loanAmount" class="form-control" name="loanAmount"
+                    id="loanAmount">
+            </div>
+
+            <div class="mb-3">
+                <label for="loanTenture" class="form-label">Loan Tenture </label>
+                <input type="number" [(ngModel)]="loan.loanTenture" class="form-control" name="loanTenture"
+                    id="loanTenture">
+            </div>
+
+
+
+
+
+
+
+            <button (click)="applyForLoan()" id="applyForLoan" class="btn btn-primary">Apply For Loan</button>
+        </form>
+
+    </div>
+</div>

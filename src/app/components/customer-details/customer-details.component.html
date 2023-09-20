@@ -1,0 +1,46 @@
+<div class="dashboard-container">
+    <nav>
+        <ul>
+            <li><a routerLink="/admin-dashboard">Home</a></li>
+            <li><a routerLink="/loan-details">Loan Details</a></li>
+            <li><a routerLink="/customer-details">Customer details</a></li>
+        </ul>
+       
+    </nav>
+    <h2 style="text-align: center; padding-top: 50px;padding-bottom: 10px;"> Customer Details</h2>
+    <table class="table" style="height:fit-content;">
+      <thead>
+        <tr>
+          <th>Customer ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone Number</th>
+          <th>Address</th>
+          <th>Date of Birth</th>
+          <th>Nationality</th>
+          <th>Gender</th>
+          <th>Age</th>
+          <th>Work Experience</th>
+          <th>Income</th>
+          <th>Credit Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let customer of customers">
+          <td>{{ customer.customerId }}</td>
+          <td>{{ customer.customerName }}</td>
+          <td>{{ customer.customerEmail }}</td>
+          <td>{{ customer.customerPhoneNo }}</td>
+          <td>{{ customer.customerAddress }}</td>
+          <td>{{ customer.customerDob | date }}</td> <!-- Format Date of Birth using 'date' pipe -->
+          <td>{{ customer.customerNationality }}</td>
+          <td>{{ customer.customerGender }}</td>
+          <td>{{ customer.customerAge }}</td>
+          <td>{{ customer.workexperience }}</td>
+          <td>{{ customer.customerIncome }}</td>
+          <td>{{ customer.customerCreditScore }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

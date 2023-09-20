@@ -1,0 +1,53 @@
+<div class="maincontainer">
+ 
+    <nav>
+      <ul>
+        <li><a id="statusFilter" [routerLink]="['/bankdashboard']" href="#">Disbursed Loan</a></li>
+        <li><a [routerLink]="['/bankapprovedloans'] " href="#">Approved Loans</a></li>
+        <li><a href="#" [routerLink]="['/loanaccount']">Loan Account</a></li>
+      </ul>
+    </nav>
+  
+  
+  
+  <h2 style="text-align: center;font-size: 20px;font-weight: bolder;">Approved Loans</h2>
+  
+  
+  
+    <table class="table-container">
+      <thead>
+        <tr>
+          <!-- Add your table headers here -->
+          <th>Loan ID</th>
+          <th>Loan Type</th>
+          <th>Loan Amount</th>
+          <th>Interest Rate</th>
+          <th>Tenure(in years)</th>
+          <th>Loan EMI</th>
+          <th>Loan Description</th>
+          <th>Status</th>
+          <th>Loan Account</th>
+          <th>Disburse Loan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let loan of loan">
+          <td>{{ loan.loanId }}</td>
+          <td>{{ loan.loanType }}</td>
+          <td>{{ loan.loanAmount }}</td>
+          <td>{{ loan.loanIntrest }}</td>
+          <td>{{ loan.loanTenture }}</td>
+          <td>{{ loan.loanEMI }}</td>
+          <td>{{ loan.loanDescription }}</td>
+          <td>{{ loan.status }}</td>
+          <td><input type="button" class="btn btn-primary" [disabled]="loan.status=='Account Generated'"
+              (click)="generateLoanAccount(loan.loanId)" value="Generate Loan Account"></td>
+          <td><input type="button" class="btn btn-primary" [disabled]="loan.status=='disbursed'"
+              (click)="disburseLoanByLoanId(loan.loanId)" value="Disburse">
+          </td>
+   
+        </tr>
+      </tbody>
+    </table>
+   
+  </div>

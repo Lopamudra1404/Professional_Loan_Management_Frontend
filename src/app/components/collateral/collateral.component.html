@@ -1,0 +1,60 @@
+<!-- 
+
+<div id="page" class="card" style="width: 18rem;">
+    
+    
+
+    <h2>Add Collateral</h2>
+
+    <form #collateralForm="ngForm" (ngSubmit)="addCollateral(collateralForm.value)">
+
+      <div class="form-group">
+
+        <label for="collateralType">Collateral Type:</label>
+
+        <input type="text" id="collateralType" name="collateralType" ngModel required>
+
+      </div>
+
+      <div class="form-group">
+
+        <label for="collateralValue">Collateral Value:</label>
+
+        <input type="number" id="collateralValue" name="collateralValue" ngModel required>
+
+      </div>
+
+      <button type="submit" class="btn btn-primary">Add Collateral</button>
+
+    </form>
+
+  </div> -->
+  <div class="main">
+    <div class="new">
+<div id="page" class="card" style="width: 18rem; align-self: center;" >
+    <h2>Add a Collateral</h2>
+    <form>
+
+
+        <div class="mb-3">
+            <label for="CollateralType" class="form-label">Collateral Type:</label>
+            <input type="text" [(ngModel)]="collateral.collateralType" class="form-control" name="CollateralType"
+                id="CollateralType">
+        </div>
+
+
+
+        <div class="mb-3">
+            <label for="collateralValue" class="form-label">Collateral Value:</label>
+            <input type="text" [(ngModel)]="collateral.collateralValue" class="form-control" name="collateralValue"
+                id="collateralValue">
+        </div>
+
+
+
+        <button (click)="addCollateral()" id="addCollateral" class="btn btn-primary">Add Collateral</button>
+        <!-- <button (click)="submit" class="btn btn-primary">Add Collateral</button> -->
+    </form>
+
+  </div></div>
+</div>

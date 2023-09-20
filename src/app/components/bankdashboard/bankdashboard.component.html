@@ -1,0 +1,36 @@
+<div class="maincontainer">
+ 
+    <nav>
+      <ul>
+        <li><a  id="statusFilter" [routerLink]="['/bankdashboard']" href="#">Disbursed Loan</a></li>
+        <li><a [routerLink]="['/bankapprovedloans'] "href="#">Approved Loans</a></li>
+        <li><a href="#" [routerLink]="['/loanaccount']">Loan Account</a></li>
+      </ul>
+    </nav>
+  
+  
+  
+  
+  
+  <div *ngIf="selectedStatus === 'All' && disbursement.length>0" class="table-container" >
+  <table >
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Amount</th>
+          <th>Description</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let disbursement of disbursement">
+         
+          <td>{{ disbursement.loanDisbursementId }}</td>
+          <td>{{ disbursement.loanDisbursementAmount }}</td>
+          <td>{{ disbursement.loanDisbursementDescription }}</td>
+          <td>{{ disbursement.loanDisbursementStatus }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>

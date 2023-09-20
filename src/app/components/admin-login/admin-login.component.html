@@ -1,0 +1,55 @@
+<!--
+<div class="lol">
+  <div class="container2">
+    <div id="page" class="card" style="width: 18rem;">
+    
+      <h2>Admin Login</h2>
+      <form>
+        <div class="mb-3">
+          <label for="email" class="form-label">Emter Email</label>
+          <input type="email" [(ngModel)]="admin.adminEmail" class="form-control" name="email" id="email"
+            placeholder="Enter admin's Email-ID" aria-describedby="emailHelp">
+        </div>
+  
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" [(ngModel)]="admin.password" class="form-control" name="password" id="password"
+            placeholder="**Password**">
+        </div>
+  
+        <button (click)="adminLogin()" id="loginbtn" class="btn btn-primary">Login</button>
+  
+      </form>
+  
+  </div>
+  </div>
+  </div>
+-->
+<div class="login">
+
+  <div class="container" class="min-vh-100 d-flex justify-content-center align-items-center">
+    <form class="d-flex flex-column shadow p-5 mb-5 bg-body rounded">
+      <h4 style="text-align: center;padding-bottom:20px ;">Admin Login</h4>
+      <div class="mb-5">
+        <label for="email" class="form-label">UserName/Email</label>
+        <input type="email" [(ngModel)]="admin.adminEmail" class="form-control" name="email" id="email"
+          placeholder=abc@gmail.com aria-describedby="emailHelp">
+      </div>
+
+      <div class="mb-5">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" [(ngModel)]="admin.password" class="form-control" name="password" id="password"
+          placeholder="**password**">
+      </div>
+
+
+      <button (click)="adminLogin()" id="loginbtn" class="btn btn-primary">Login</button>
+
+
+
+
+
+    </form>
+
+  </div>
+</div>

@@ -1,0 +1,51 @@
+
+    /* Style for the outer container */
+    .main{
+        height: 100vh;
+        justify-content: center;
+        text-align: center;
+        justify-content: center;
+        background-color: #ffffff;
+        
+        border: 1px solid #ccc;
+        border-radius: 5px;
+   
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        background: linear-gradient(164deg, #E8E8E8 5%, #80D0C7 100%);
+       
+    }
+    .card1{
+        text-align: center;
+        width: 60%;
+        margin-left:20%;
+        margin-top: 150px;
+        background-color: white;
+    }
+    
+    .card1 img{
+        width:200px;
+        height: auto;
+    }
+    /* Style for the heading */
+    .profile-container h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #333;
+        
+       
+    }
+
+    /* Style for individual detail lines */
+    .profile-container p {
+        margin: 5px 0;
+        color: #666;
+        
+    }
+
+    /* Style for strong elements within p tags */
+    .profile-container p strong {
+        font-weight: bold;
+        color: #000;
+    }
+

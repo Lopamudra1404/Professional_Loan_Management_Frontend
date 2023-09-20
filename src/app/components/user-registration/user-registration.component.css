@@ -1,0 +1,70 @@
+/* #page {
+
+   
+
+    margin-inline: 40%;
+
+    margin-top: 10%;
+
+    padding: 2%;
+
+} */
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    /* padding: 50px; */
+}
+.card {
+  
+    height: 85vh;  
+    overflow: scroll;
+
+    
+      
+}
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+input{
+    /* margin-left:-5px; */
+    box-sizing: border-box;
+}
+.mb-3 {
+
+
+    /* align-content: center; */
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+   
+
+}
+
+
+
+
+button {
+
+    margin-inline: 45%;
+
+}
+h2 {
+
+    padding-top: 5%;
+
+}
+#add{
+    flex-grow: 1;
+}
+button{
+    margin-top: 45px;
+    /* padding: 10px 15px 10px 15px; */
+}

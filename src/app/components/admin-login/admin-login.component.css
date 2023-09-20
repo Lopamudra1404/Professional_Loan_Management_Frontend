@@ -1,0 +1,41 @@
+
+.container2{
+    height: 100vh;
+    width: 100%;
+    padding-top: 100px;
+    /* background: linear-gradient(164deg, #E8E8E8 5%, #80D0C7 100%); */
+}
+
+#page{
+    margin-inline: 40%;
+    /* margin-top: 20%; */
+    padding: 1%;
+    width: 1050px;
+    height: 400px;
+    /* background: linear-gradient(to top, #3fada8, #e8e8e8); */
+}
+
+.card1{
+    align-items: center;
+    padding-top: 20px;
+}
+
+/* .mb-3{
+    align-content: center;
+} */
+
+/* button{
+    margin-inline: 35%;
+} */
+
+/* h2{
+    padding-bottom: 25%;
+    align-items: center;
+} */
+/* .lol{
+    background: linear-gradient(164deg, #E8E8E8 5%, #80D0C7 100%);
+} */
+.login{
+    background: linear-gradient(164deg, #E8E8E8 5%, #80D0C7 100%);
+
+}
